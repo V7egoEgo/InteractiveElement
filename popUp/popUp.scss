@@ -1,0 +1,148 @@
+.pop-up__box
+{
+	background-color: rgba(0, 0, 0, 0.75);
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 11;
+	opacity: 1;
+	pointer-events: auto;
+}
+.pop-up__contener
+{
+	position: relative;
+	margin:0 auto;
+	background-color: #fff;
+	width: 428px;
+	height: 550px;
+	border-radius: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+}
+.pop-up__scrol{
+    overflow: auto; 
+}
+.pop-up__closer
+{
+	width: 32px;
+	height: 32px;
+	top: 7%;
+	position: relative;
+	left: 85%;
+	color:#000000;
+	cursor: pointer;
+}
+.pop-up__h2
+{
+	position: relative;
+	left: 0;
+	top: 0;
+	color: black;
+	font-size: 32px;
+	font-weight: 600;
+	line-height: 36px;
+	letter-spacing: -0.4px;
+	margin: 16px 30px;
+}
+._pop-up__none
+{
+	pointer-events: none;
+	opacity: 0;
+}
+.pop-up__item-box{
+	margin: 4px 16px;
+	display: flex;
+	justify-content: space-around;
+	background-color: #F2F2F2;
+	padding: 5px;
+	border-radius: 5px;
+	p
+	{
+		color: #3F4043;
+		margin: 1.5px;
+	}
+}
+.pop-up__cont-item
+{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	width: 184px;
+	opacity: 1;
+	pointer-events: auto;
+    overflow-y: auto;
+	&.acent-color{color:#9F9F9F;}
+}
+.pop-up__btn
+{
+	display: flex;
+	width: 32px;
+	height: 32px;
+	padding: 10px 0px;
+	border-radius: 50%;
+	justify-content: center;
+	align-items: center;
+	gap: 4px;
+}
+
+.pop-up__conteiner-btn
+{
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	gap: 10px;
+	.pop-up__count
+	{
+		color: #fff;
+		background-color: black;
+		width: 32px;
+		height: 32px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 50%;
+		position: relative;
+	}
+}
+.pop-up__box-buy
+{
+	display: flex;
+	justify-content: space-evenly;
+}
+.pop-up__summ
+{
+	color: #131313;
+	font-size: 28px;
+	font-weight: 600;
+	line-height: 32px;
+	letter-spacing: 0.3px;
+}
+.pop-up__btn-buy
+{
+	display: flex;
+	width: 164px;
+	height: 44px;
+	padding: 9px 26px 10px 26px;
+	background-color: #000;
+	justify-self: center;
+	align-items: center;
+	color: #fff;
+	border-radius: 100px;
+	font-size: 14px;
+}
+.pop-up__product
+{
+	font-size: 12px;
+	&.acent-color{color:#9F9F9F;}
+}
+._pop-up__item-hiden
+{
+	pointer-events: none;
+	opacity: 0;
+}

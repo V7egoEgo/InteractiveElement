@@ -1,0 +1,62 @@
+<div  class="pop-up" >
+<button onclick="o2.popUp.openPopup(event)">open</button>
+	<div onclick="o2.popUp.closerPopup(event)"
+		class="pop-up__box _pop-up__none">
+		<div
+			onclick="event.stopPropagation()"
+			class="pop-up__contener">
+			<img
+			onclick="o2.popUp.closerPopup(event)"
+			src="./svg/close.svg" alt="img"
+			class="pop-up__closer">
+			<h2 class="pop-up__h2">Корзина</h2>
+				<div class="pop-up__item-box">
+					<img src="./img/item.png" alt="ItemImg">
+					<div class="pop-up__cont-item">
+						<p class="pop-up__item-name">Aesop</p>
+						<p>Rose Hair & Scalp Moisturisin Masque</p>
+						<p class="pop-up__price _price">3000 ₽</p>
+					</div>
+					<div class="pop-up__conteiner-btn" onclick="event.stopPropagation()" >
+						<button class="pop-up__btn" onclick="o2.popUp.counterMin(event)">-</button>
+						<p class="pop-up__count _count">10</p>
+						<button class="pop-up__btn" onclick="o2.popUp.counterPlus(event)">+</button>
+						</div>
+					</div>
+					<div class="pop-up__item-box ">
+						<img src="./img/item.png" alt="ItemImg">
+						<div class="pop-up__cont-item">
+							<p class="pop-up__item-name">Aesop</p>
+							<p>Rose Hair & Scalp Moisturisin Masque</p>
+							<p class="pop-up__price _price">3000 ₽</p>
+						</div>
+					<div class="pop-up__conteiner-btn" onclick="event.stopPropagation()" >
+						<button class="pop-up__btn" onclick="o2.popUp.counterMin(event)">-</button>
+						<p class="pop-up__count _count">10</p>
+						<button class="pop-up__btn" onclick="o2.popUp.counterPlus(event)">+</button>
+					</div>
+				</div>
+            	<div class="pop-up__item-box ">
+					<img src="./img/item.png" alt="ItemImg">
+					<div class="pop-up__cont-item">
+						<p class="pop-up__item-name">Aesop</p>
+						<p>Rose Hair & Scalp Moisturisin Masque</p>
+						<p class="pop-up__price _price">3000 ₽</p>
+					</div>
+					<div class="pop-up__conteiner-btn" onclick="event.stopPropagation()" >
+						<button class="pop-up__btn" onclick="o2.popUp.counterMin(event)">-</button>
+						<p class="pop-up__count _count">10</p>
+						<button class="pop-up__btn" onclick="o2.popUp.counterPlus(event)">+</button>
+					</div>
+				</div>
+			</div>
+			<div class="pop-up__box-buy">
+				<div class="pop-up__item-buy">
+					<div class="pop-up__summ _summ">000 ₽</div>
+					<div class="pop-up__product acent-color _count-product">У вас нет товаров</div>
+				</div>
+				<button class="pop-up__btn-buy">Оформить заказ</button>
+			</div>
+		</div>
+	</div>
+</div>
