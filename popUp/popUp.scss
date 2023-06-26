@@ -25,14 +25,12 @@
 	justify-content: space-between;
 
 }
-.pop-up__scrol{
-    overflow: auto; 
-}
+.pop-up__scroll{overflow: auto; }
 .pop-up__closer
 {
 	width: 32px;
 	height: 32px;
-	top: 7%;
+	top: 5%;
 	position: relative;
 	left: 85%;
 	color:#000000;

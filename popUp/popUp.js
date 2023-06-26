@@ -46,7 +46,7 @@ o2.popUp =
 				const counter = boxItem.querySelector('._count');
 				const priceText = boxItem.querySelector('._price').textContent;
 				counter.textContent -= 1;
-			 	this.openPopup(event);
+				this.openPopup(event);
 			}
 	},
 	counterPlus(event)
