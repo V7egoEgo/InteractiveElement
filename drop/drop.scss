@@ -1,0 +1,39 @@
+
+.drop
+{
+	position: relative;
+}
+.drop__input-help
+{
+	margin-left: 10px;
+	position: absolute;
+	top: 10px;
+	color: #222;
+	opacity: 0.3;
+}
+.drop__input
+{
+	width: 200px;
+	height: 60px;
+}
+.drop__box
+{
+
+
+}
+.drop__input-lable
+{
+	position: absolute;
+	top: -10px;
+	color: #222;
+	margin-left: 10px;
+}
+._hidden
+{
+	pointer-events: none;
+	opacity: 0;
+}
+._error
+{
+	border-color: red;
+}

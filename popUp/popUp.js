@@ -14,14 +14,14 @@ o2.popUp =
 		const box = popUp.querySelector('.pop-up__box');
 		box.classList.remove('_pop-up__none');
 		const boxItems = [...box.querySelectorAll('.pop-up__item-box')];
-		let summText = box.querySelector('._summ');
-		let countProduct = box.querySelector('._count-product');
+		const summText = box.querySelector('._summ');
+		const countProduct = box.querySelector('._count-product');
 		const priceMap = boxItems.map(el=>
-				{
-					const counter = el.querySelector('._count').textContent;
-					const priceText = el.querySelector('._price').textContent;
-					const price = parseFloat(priceText);
-					if (counter == 0){el.classList.add('_pop-up__item-hiden')}
+			{
+				const counter = el.querySelector('._count').textContent;
+				const priceText = el.querySelector('._price').textContent;
+				const price = parseInt(priceText, 10);
+				if (counter == 0){el.classList.add('_pop-up__item-hiden')}
 				let summ =+ price *counter;
 				return summ;
 			})
@@ -41,23 +41,21 @@ o2.popUp =
 	counterMin(event)
 	{
 		const boxItem = event.target.closest('.pop-up__item-box');
-			if (boxItem)
-			{
-				const counter = boxItem.querySelector('._count');
-				const priceText = boxItem.querySelector('._price').textContent;
-				counter.textContent -= 1;
-				this.openPopup(event);
-			}
+		if (boxItem)
+		{
+			const counter = boxItem.querySelector('._count');
+			counter.textContent -= 1;
+			this.openPopup(event);
+		}
 	},
 	counterPlus(event)
 	{
 		const boxItem = event.target.closest('.pop-up__item-box');
-			if (boxItem)
-			{
-				const counter = boxItem.querySelector('._count');
-				const price = parseFloat( boxItem.querySelector('._price').textContent);
-				counter.textContent = parseInt(counter.textContent)+1;
-				this.openPopup(event)
-			}
+		if (boxItem)
+		{
+			const counter = boxItem.querySelector('._count');
+			counter.textContent = parseInt(counter.textContent)+1;
+			this.openPopup(event)
+		}
 	}
 }
