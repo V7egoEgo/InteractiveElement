@@ -1,9 +1,9 @@
 
-.drop
+.dropDown
 {
 	position: relative;
 }
-.drop__input-help
+.dropDown__input-help
 {
 	margin-left: 10px;
 	position: absolute;
@@ -11,17 +11,17 @@
 	color: #222;
 	opacity: 0.3;
 }
-.drop__input
+.dropDown__input
 {
 	width: 200px;
 	height: 60px;
 }
-.drop__box
+.dropDown__box
 {
 
 
 }
-.drop__input-lable
+.dropDown__input-lable
 {
 	position: absolute;
 	top: -10px;

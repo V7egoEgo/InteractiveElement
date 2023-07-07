@@ -1,6 +1,6 @@
-o2.drop =
+o2.dropDown =
 {
-	dropDown()
+	open()
 	{
 		const drop = event.target.closest('.drop');
 		const boxHelp = drop.querySelector('.drop__box');
@@ -8,15 +8,16 @@ o2.drop =
 		const labelHelper = drop.querySelector('.drop__input-help');
 		boxHelp.classList.remove('_hidden');
 		labelHelper.classList.add('_hidden');
+		text.forEach(el => el.classList.remove('_hidden'))
 
 	},
-	dropDownNone(event)
+	close(event)
 	{
 
 		const drop = event.target.closest('.drop');
 		const boxHelp = drop.querySelector('.drop__box');
 		const labelHelper = drop.querySelector('.drop__input-help');
-		const addp = document.createElement('p');
+		const addOptions = document.createElement('p');
 		boxHelp.classList.add('_hidden');
 		labelHelper.classList.remove('_hidden');
 		if(event.target.value.trim() === "" || event.target.value.trim() === " " )
@@ -26,9 +27,8 @@ o2.drop =
 		}
 		else
 		{
-			addp.textContent = event.target.value;
-			addp.classList.add('drop__p', '_hidde');
-			console.log(boxHelp)
+			addOptions.textContent = event.target.value;
+			addOptions.classList.add('drop__p', '_hidden');
 			boxHelp.appendChild(addp);
 			event.target.classList.remove('_error');
 			event.target.value = '';
