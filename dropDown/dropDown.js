@@ -1,11 +1,11 @@
 o2.dropDown =
 {
-	open()
+	open(event)
 	{
-		const drop = event.target.closest('.drop');
-		const boxHelp = drop.querySelector('.drop__box');
-		const text = drop.querySelectorAll('.drop__p');
-		const labelHelper = drop.querySelector('.drop__input-help');
+		const dropDown = event.target.closest('.dropDown');
+		const boxHelp = dropDown.querySelector('.dropDown__box');
+		const text = dropDown.querySelectorAll('.dropDown__p');
+		const labelHelper = dropDown.querySelector('.dropDown__input-help');
 		boxHelp.classList.remove('_hidden');
 		labelHelper.classList.add('_hidden');
 		text.forEach(el => el.classList.remove('_hidden'))
@@ -14,9 +14,9 @@ o2.dropDown =
 	close(event)
 	{
 
-		const drop = event.target.closest('.drop');
-		const boxHelp = drop.querySelector('.drop__box');
-		const labelHelper = drop.querySelector('.drop__input-help');
+		const dropDown = event.target.closest('.dropDown');
+		const boxHelp = dropDown.querySelector('.dropDown__box');
+		const labelHelper = dropDown.querySelector('.dropDown__input-help');
 		const addOptions = document.createElement('p');
 		boxHelp.classList.add('_hidden');
 		labelHelper.classList.remove('_hidden');
@@ -28,8 +28,8 @@ o2.dropDown =
 		else
 		{
 			addOptions.textContent = event.target.value;
-			addOptions.classList.add('drop__p', '_hidden');
-			boxHelp.appendChild(addp);
+			addOptions.classList.add('dropDown__p', '_hidden');
+			boxHelp.appendChild(addOptions);
 			event.target.classList.remove('_error');
 			event.target.value = '';
 		}
