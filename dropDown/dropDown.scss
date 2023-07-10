@@ -1,9 +1,10 @@
 
-.dropDown
+.dropdown{position: relative;}
+.dropdown__lable
 {
-	position: relative;
+	position: absolute;
 }
-.dropDown__input-help
+.dropdown__input-help
 {
 	margin-left: 10px;
 	position: absolute;
@@ -11,29 +12,30 @@
 	color: #222;
 	opacity: 0.3;
 }
-.dropDown__input
+.dropdown__input
 {
 	width: 200px;
 	height: 60px;
 }
-.dropDown__box
-{
 
-
-}
-.dropDown__input-lable
+.dropdown__input-lable
 {
 	position: absolute;
 	top: -10px;
 	color: #222;
 	margin-left: 10px;
 }
-._hidden
+.dropdown__arrow
 {
-	pointer-events: none;
-	opacity: 0;
+	border-top: 1px solid black;
+	border-right: 1px solid black;
+	width: 10px;
+	height: 10px;
+	position: relative;
+	left: 160px;
+	bottom: 35px;
 }
-._error
-{
-	border-color: red;
-}
+.dropdown__arrow-up{transform: rotate(315deg);}
+.dropdown__arrow-down{transform: rotate(135deg);}
+._hidden{display: none;}
+._error{border-color: red;}

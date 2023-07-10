@@ -1,0 +1,143 @@
+// .loader-mask
+// {
+// 	position: fixed;
+// 	background: #000;
+// 	top: 0;
+// 	right:0;
+// 	bottom:0;
+// 	left:0;
+// 	transition:.5s;
+// 	z-index: 111;
+// }
+// .hide
+// {
+// 	transform: scale(0);
+// }
+// .loade
+// {
+// 	width: 100px;
+// 	height: 100px;
+// 	position: absolute;
+// 	top: 20px;
+// 	left:15px;
+// 	animation: loader 2s linear infinite;
+// }
+// .circle
+// {
+// 	width: 30px;
+// 	height: 30px;
+// 	border-radius: 50%;
+// 	position: absolute;
+// }
+// .red
+// {
+// 	background: red;
+// 	box-shadow: 0 0 20px 5px red;
+// 	top:49%;
+// 	left:47%;
+// 	animation: red 4s infinite;
+// }
+// .green
+// {
+// 	background: green;
+// 	box-shadow: 0 0 20px 5px green;
+// 	top: 50%;
+//     left: 52%;
+// 	animation: green 4s infinite;
+// }
+// .blue
+// {
+// 	background: blue;
+// 	box-shadow: 0 0 20px 5px blue;
+// 	bottom:53%;
+// 	left: 50%;
+// 	animation: blue 4s infinite;
+// }
+// @keyframes red
+// {
+// 	0%
+// 	{
+// 		box-shadow: 0 0 20px 5px red;
+// 		top:49%;
+// 		left:47%;
+// 	}
+// 	33%
+// 	{
+// 		transform: scale(1.1);
+// 		box-shadow: 0 0 24px 10px red;
+// 		top: 50%;
+// 		left: 52%;
+// 	}
+// 	66%
+// 	{
+// 		box-shadow: 0 0 24px 10px red;
+// 		top: 43%;
+// 		left: 50%;
+// 	}
+// 	100%
+// 	{
+// 		box-shadow: 0 0 20px 5px red;
+// 		top:49%;
+// 		left:47%;
+// 	}
+// }
+
+// @keyframes green
+// {
+// 	0%
+// 	{
+// 		top: 50%;
+// 		left: 52%;
+// 		box-shadow: 0 0 20px 5px green;
+// 	}
+// 	33%
+// 	{
+// 		top: 43%;
+// 		left: 49%;
+// 		transform: scale(1.1);
+// 		box-shadow: 0 0 24px 10px green;
+// 	}
+// 	66%
+// 	{
+// 		top: 50%;
+// 		left: 47%;
+// 		box-shadow: 0 0 24px 10px green;
+
+// 	}
+// 	100%
+// 	{
+// 		top: 50%;
+// 		left: 52%;
+// 		box-shadow: 0 0 20px 5px green;
+// 	}
+// }
+
+// @keyframes blue
+// {
+// 	0%
+// 	{
+// 		bottom:53%;
+// 		left: 50%;
+// 		box-shadow: 0 0 20px 5px blue;
+// 	}
+// 	33%
+// 	{
+// 		bottom:45%;
+// 		left:47%;
+// 		transform: scale(1.1);
+// 		box-shadow: 0 0 24px 10px blue;
+// 	}
+// 	66%
+// 	{
+// 		bottom:45%;
+// 		left:52%;
+// 		box-shadow: 0 0 24px 10px blue;
+
+// 	}
+// 	100%
+// 	{
+// 		box-shadow: 0 0 20px 5px blue;
+// 	}
+
+// }
+

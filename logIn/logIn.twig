@@ -1,0 +1,26 @@
+<button onclick="o2.logIn.open()">logIn</button>
+<div class="login _hidden" onclick="o2.logIn.closer()" >	
+	<form action="#" class="login__form " onclick="event.stopPropagation()">
+		<h2>Login</h2>	<p onclick="o2.logIn.closer()"  class="login__closer">x</p>
+		<div class="login__input">
+			<img src="./svg/mailLog.svg" class="login__svg" alt="mail">
+			<input type="text" class="login__inp">
+			<p class="login__input-p">Email</p>
+		</div>
+		<div class="login__input">
+			<img src="./svg/lockLog.svg" class="login__svg" alt="loc">
+			<input type="text" class="login__inp">
+			<p class="login__input-p">password</p>
+		</div>
+		<div class="login__remember">
+			<label class="color"><input type="checkbox" > remember me</label>
+			<a href="#" class="color">Forgot password?</a>
+		</div>
+		<div class="login__btn-box">
+			<button type="submit" class="login__btn">Login</button>
+			<button type="submit" class="login__btn">Registration</button>
+		</div>
+
+	</form>
+
+</div>
