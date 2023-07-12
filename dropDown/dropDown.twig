@@ -1,11 +1,13 @@
-<div class="dropdown">
-<p class="dropdown__lable _hidden">111</p>
-<p  class="dropdown__input-help" >текст</p>
-<input  onclick="o2.dropDown.open(event)" class="dropdown__input"  onblur="o2.dropDown.close(event)"type="text">
-<div class="dropdown__arrow dropdown__arrow-up"></div>
-<div class="dropdown__box _hidden">
-	<p class="dropdown__p">текст</p>
-	<p class="dropdown__p">текст</p>
-	<p class="dropdown__p">текст</p>
-</div>
+<div
+class="dropdown  _dropdown ">
+	<div class="dropdown__arrow dropdown__arrow-up"></div>
+	<input class="dropdown__input"
+	onclick="o2.dropDown.toggle(this)"
+	onblur="o2.dropDown.close(this)"type="text">
+	<p  class="dropdown__input-help">текст</p>
+	<div class="dropdown__box ">
+		<p class="dropdown__p">текст</p>
+		<p class="dropdown__p">текст</p>
+		<p class="dropdown__p">текст</p>
+	</div>
 </div>
