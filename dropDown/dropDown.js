@@ -7,11 +7,11 @@ o2.dropDown =
 	close(input)
 	{
 		const dropDowns = document.querySelectorAll('._dropdown');
-		dropDowns.forEach(el => {
-			el.classList.remove('dropdown--opened')
-		})
-		if(input.value.trim()){input.classList.add('error');}
-		else{input.classList.remove('error');}
+		dropDowns.forEach(el => el.classList.remove('dropdown--opened'))
+		if(!input.value.trim())
+			input.classList.add('error');
+		else
+			input.classList.remove('error');
 		input.value = '';
 	},
 	toggle(instance)
