@@ -1,55 +1,70 @@
-o2.dz =
+o2.slider =
 {
-	next(btn) {
-	const sliderBlock = btn.parentNode;
-	const sliderVision = sliderBlock.querySelector('.slider__visible');
-	const sliderItem = sliderBlock.querySelectorAll('.slider__item');
-	const sliderBox = sliderBlock.querySelector('.slider__box');
-	const widthItem = sliderItem[0].offsetWidth;
-	let currentTranslation = parseInt(sliderVision.dataset.translation || 0);
-	//  количество шагов ф
-	currentTranslation -= Math.round(widthItem * 2);
-	sliderVision.style.transform = `translateX(${currentTranslation}px)`;
-	sliderVision.dataset.translation = currentTranslation;
-	if ( currentTranslation < -widthItem * (sliderItem.length-6))
+	
+o2.slider =
+
+{
+	next(btn)
 	{
-		console.log(1)
-		sliderVision.style.transform = `translateX(-${widthItem * (sliderItem.length-6)})`;
-		sliderVision.dataset.translation = -widthItem * (sliderItem.length-6);
-	}
-
-},
-
-prev(btn) {
-	const sliderBlock = btn.parentNode;
-	const sliderVision = sliderBlock.querySelector('.slider__visible');
-	const sliderItem = sliderBlock.querySelectorAll('.slider__item');
-	const sliderBox = sliderBlock.querySelector('.slider__box');
-	const widthItem = sliderItem[0].offsetWidth;
-	let currentTranslation = parseInt(sliderVision.dataset.translation || 0);
-	console.log(sliderVision.dataset.shag)
-	// Количество шагов
-	currentTranslation += Math.round(widthItem * 2);
-
-	if (currentTranslation <= 0)
-	{
+		const sliderBlock = btn.parentNode;
+		const sliderVision = sliderBlock.querySelector('.slider__visible');
+		const sliderItem = sliderBlock.querySelectorAll('.slider__item');
+		const sliderBox = sliderBlock.querySelector('.slider__box');
+		const widthItem = sliderItem[0].offsetWidth;
+		let currentTranslation = parseInt(sliderVision.dataset.translation || 0);
+		const vusionBlock = parseInt(sliderVision.dataset.visionbloc)
+		//сколько слайдов перелистывается за один клик
+		const shag = 2;
+		const itog = vusionBlock + shag;
+		currentTranslation -= Math.round(widthItem * shag);
 		sliderVision.style.transform = `translateX(${currentTranslation}px)`;
 		sliderVision.dataset.translation = currentTranslation;
-	}
-	else
+		if ( currentTranslation < -widthItem * (sliderItem.length-itog))
+		{
+			sliderVision.style.transform = `translateX(-${widthItem * (sliderItem.length-itog)})`;
+			sliderVision.dataset.translation = -widthItem * (sliderItem.length-itog);
+		}
+
+	},
+
+	prev(btn)
 	{
-		sliderVision.style.transform = `translateX(0px)`;
-		sliderVision.dataset.translation = 0;
-	}
+		const sliderBlock = btn.parentNode;
+		const sliderVision = sliderBlock.querySelector('.slider__visible');
+		const sliderItem = sliderBlock.querySelectorAll('.slider__item');
+		const sliderBox = sliderBlock.querySelector('.slider__box');
+		const widthItem = sliderItem[0].offsetWidth;
+		let currentTranslation = parseInt(sliderVision.dataset.translation || 0);
+		//сколько слайдов перелистывается за один клик
+		const shag = 2;
+		currentTranslation += Math.round(widthItem * shag);
+
+		if (currentTranslation <= 0)
+		{
+			sliderVision.style.transform = `translateX(${currentTranslation}px)`;
+			sliderVision.dataset.translation = currentTranslation;
+		}
+		else
+		{
+			sliderVision.style.transform = `translateX(0px)`;
+			sliderVision.dataset.translation = 0;
+		}
 
 	},
 	create()
 	{
 		const sliderVision = document.querySelector('.slider__visible');
-		const sliderItem = document.querySelectorAll('.slider__item');
-		// слайдер подхватит ширину в зависимости от кол-ва слайдов
-		sliderVision.dataset.shag = 4;
-		sliderVision.style.width = 100/sliderVision.dataset.shag * sliderItem.length + '%';
+		const sliderItem = [...document.querySelectorAll('.slider__item')];
+		const sliderBox = document.querySelector('.slider__box')
+		let widthItem = sliderItem[0].offsetWidth;
+		// ниже указать сколько слайдов будет видимым
+		sliderVision.dataset.visionbloc = 5;
+		sliderItem.forEach(el =>
+		{
+			el.style.width = sliderBox.offsetWidth/sliderVision.dataset.visionbloc +'px';
+		})
+		sliderItem[0].style.width = sliderBox.offsetWidth/sliderVision.dataset.visionbloc ;
+		sliderVision.style.width = 100/sliderVision.dataset.visionbloc * sliderItem.length + '%';
 	}
 
 }
