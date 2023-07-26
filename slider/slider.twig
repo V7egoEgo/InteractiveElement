@@ -4,98 +4,22 @@
 	<h2 class="slider__h2">Популярные Товары</h2>
 	<div class="slider__box">
 		<div class="slider__visible">
-			<div class="slider__item">
-				<img class="slider__serdce" src="./svg/serdce.svg" alt="serdce">
+			<div class="slider__item ">
+				<div class="slider__serdce" onclick="o2.slider.toggle(this)">{% include '@assets/svg/serdce.svg' %}</div>
 				<p class="slider__action">экономия 20 %</p>
 				<img src="./img/Image.png" alt="slider__item">
 				<h3>Вимакс Супер Форте капс. № 30</h3>
 				<p>	250,20р</p>
-				<p>258,20р</p>
-				<button class="slider__buy">в корзину</button>
-			</div>
-			<div class="slider__item">
-				<img class="slider__serdce" src="./svg/serdce.svg" alt="serdce">
-				<img src="./img/Image.png" alt="slider__item">
-				<h3>Вимакс Супер Форте капс. № 30</h3>
-				<p>	250,20р</p>
-				<p>258,20р</p>
-				<button class="slider__buy">в корзину</button>
-			</div>
-			<div class="slider__item">
-				<img class="slider__serdce" src="./svg/serdce.svg" alt="serdce">
-				<p class="slider__action">экономия 20 %</p>
-				<img src="./img/Image.png" alt="slider__item">
-				<h3>Вимакс Супер Форте капс. № 30</h3>
-				<p>	250,20р</p>
-				<p>258,20р</p>
-				<button class="slider__buy">в корзину</button>
-			</div>
-			<div class="slider__item">
-				<img class="slider__serdce" src="./svg/serdce.svg" alt="serdce">
-				<p class="slider__action">экономия 20 %</p>
-				<img src="./img/Image.png" alt="slider__item">
-				<h3>Вимакс Супер Форте капс. № 30</h3>
-				<p>	250,20р</p>
-				<p>258,20р</p>
-				<button class="slider__buy">в корзину</button>
-			</div>
-			<div class="slider__item">
-				<img class="slider__serdce" src="./svg/serdce.svg" alt="serdce">
-				<img src="./img/Image.png" alt="slider__item">
-				<h3>Вимакс Супер Форте капс. № 30</h3>
-				<p>	250,20р</p>
-				<p>258,20р</p>
-				<button class="slider__buy">в корзину</button>
-			</div>
-			<div class="slider__item">
-				<img class="slider__serdce" src="./svg/serdce.svg" alt="serdce">
-				<p class="slider__action">экономия 20 %</p>
-				<img src="./img/Image.png" alt="slider__item">
-				<h3>Вимакс Супер Форте капс. № 30</h3>
-				<p>	250,20р</p>
-				<p>258,20р</p>
-				<button class="slider__buy">в корзину</button>
-			</div>
-			<div class="slider__item">
-				<img class="slider__serdce" src="./svg/serdce.svg" alt="serdce">
-				<p class="slider__action">экономия 20 %</p>
-				<img src="./img/Image.png" alt="slider__item">
-				<h3>Вимакс Супер Форте капс. № 30</h3>
-				<p>	250,20р</p>
-				<p>258,20р</p>
-				<button class="slider__buy">в корзину</button>
-			</div>
-			<div class="slider__item">
-				<img class="slider__serdce" src="./svg/serdce.svg" alt="serdce">
-				<img src="./img/Image.png" alt="slider__item">
-				<h3>Вимакс Супер Форте капс. № 30</h3>
-				<p>	250,20р</p>
-				<p>258,20р</p>
-				<button class="slider__buy">в корзину</button>
-			</div>
-			<div class="slider__item">
-				<img class="slider__serdce" src="./svg/serdce.svg" alt="serdce">
-				<p class="slider__action">экономия 20 %</p>
-				<img src="./img/Image.png" alt="slider__item">
-				<h3>Вимакс Супер Форте капс. № 30</h3>
-				<p>	250,20р</p>
-				<p>258,20р</p>
-				<button class="slider__buy">в корзину</button>
-			</div>
-			<div class="slider__item">
-				<img class="slider__serdce" src="./svg/serdce.svg" alt="serdce">
-				<p class="slider__action">экономия 20 %</p>
-				<img src="./img/Image.png" alt="slider__item">
-				<h3>Вимакс Супер Форте капс. № 30</h3>
-				<p>	250,20р</p>
-				<p>258,20р</p>
-				<button class="slider__buy">в корзину</button>
-			</div>
-			<div class="slider__item">
-				<img class="slider__serdce" src="./svg/serdce.svg" alt="serdce">
-				<img src="./img/Image.png" alt="slider__item">
-				<h3>Вимакс Супер Форте капс. № 30</h3>
-				<p>	250,20р</p>
+				<div class="slider__rating">
+					<div class="slider__rating" >
+					<div class="slider__rating--active"></div>
+						<input onclick="o2.slider.choice(this)" class="slider__rating-item" type="radio" name="rating"  value="1">
+						<input onclick="o2.slider.choice(this)" class="slider__rating-item" type="radio" name="rating" value="2">
+						<input onclick="o2.slider.choice(this)" class="slider__rating-item" type="radio" name="rating" value="3">
+						<input onclick="o2.slider.choice(this)" class="slider__rating-item" type="radio" name="rating" value="4">
+						<input onclick="o2.slider.choice(this)" class="slider__rating-item" type="radio" name="rating" value="5">
+					</div>
+				</div>
 				<p>258,20р</p>
 				<button class="slider__buy">в корзину</button>
 			</div>

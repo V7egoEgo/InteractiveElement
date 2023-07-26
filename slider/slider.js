@@ -1,7 +1,9 @@
+
 o2.slider =
+
 {
-	
-{
+	next(btn)
+	{
 		const sliderBlock = btn.parentNode;
 		const sliderVision = sliderBlock.querySelector('.slider__visible');
 		const sliderItem = sliderBlock.querySelectorAll('.slider__item');
@@ -54,8 +56,9 @@ o2.slider =
 		const sliderVision = document.querySelector('.slider__visible');
 		const sliderItem = [...document.querySelectorAll('.slider__item')];
 		const sliderBox = document.querySelector('.slider__box')
+		const sliderStar = document.querySelectorAll('.slider__rating-item')
 		let widthItem = sliderItem[0].offsetWidth;
-		// ниже указать сколько слайдов будет видно одновременно
+		// ниже указать сколько слайдов будет видимым
 		sliderVision.dataset.visionbloc = 4;
 		sliderItem.forEach(el =>
 		{
@@ -63,6 +66,40 @@ o2.slider =
 		})
 		sliderItem[0].style.width = sliderBox.offsetWidth/sliderVision.dataset.visionbloc ;
 		sliderVision.style.width = 100/sliderVision.dataset.visionbloc * sliderItem.length + '%';
-	}
+	},
+	toggle(item)
+	{
+		if (!item.classList.contains('slider__item--active'))
+			this.chose(item);
+		else
+			this.deletion(item);
+	},
+	chose(item)
+	{
+		item.classList.add('slider__item--active');
+	},
+	deletion(item)
+	{
+		item.classList.remove('slider__item--active');
+	},
+	choice(btn)
+	{
+		const score =  btn.parentNode;
+		const activeScore = score.querySelector('.slider__rating--active')
+		const btnWidth = btn.offsetWidth + 5;
+		activeScore.style.width = btnWidth * btn.value + 'px';
+		if (btn.value === '5')
+		{
+			activeScore.style.width = '100%'
+		}
 
+	}
 }
+
+
+// настройки слика
+//тут указать класс $('.slider').slick({
+// Бесконечный ли слайдер  infinite: false,
+// Сколько слайдев показать  slidesToShow: 4,
+// Сколько слайдов перелистывать slidesToScroll: 2
+// });
